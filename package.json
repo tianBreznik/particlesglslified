@@ -1,0 +1,33 @@
+{
+  "name": "particlesglslified",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "budo index.js --open --live --host localhost -- -t es2040 -t glslify",
+    "build": "browserify index.js -t glslify -t es2040 | uglifyjs -cm | indexhtmlify > index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "budo": "^11.6.4",
+    "es2040": "^1.2.6",
+    "indexhtmlify": "^2.0.1",
+    "uglify-js": "^3.12.0"
+  },
+  "dependencies": {
+    "angle-normals": "^1.0.0",
+    "bunny": "^1.0.1",
+    "canvas-fit": "^1.5.0",
+    "gl-context": "^0.1.1",
+    "gl-mat4": "^1.2.0",
+    "gl-particles": "^1.1.0",
+    "glsl-noise": "0.0.0",
+    "glslify": "^7.1.1",
+    "hsv2rgb": "^1.1.0",
+    "regl": "^2.0.1",
+    "regl-camera": "^2.1.1"
+  }
+}
